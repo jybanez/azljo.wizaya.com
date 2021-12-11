@@ -1,0 +1,23 @@
+{
+  "name": "azljo.wizaya.com",
+  "version": "1.0.0",
+  "description": "AZL Jo",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jybanez/azljo.wizaya.com.git"
+  },
+  "keywords": [
+    "AZL Jo",
+    "Election"
+  ],
+  "author": "Wizaya Business Technologies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jybanez/azl.wizaya.com/issues"
+  },
+  "homepage": "https://github.com/jybanez/azl.wizaya.com#readme"
+}
