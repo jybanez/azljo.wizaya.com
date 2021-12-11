@@ -97,18 +97,6 @@ var App = {
 			});
 		},
 		intro:function(onComplete){
-			this.$introContainer = new Element('div',{
-				styles:{
-					position:'relative',
-					top:0,
-					left:0,
-					right:0,
-					bottom:0,
-					overflow:'hidden',
-					background:'#000',
-					'z-index:100
-				}
-			}).inject(this.$body);
 			this.$intro = new Element('video',{
 				controls:false,
 				autoplay:true,
@@ -120,7 +108,7 @@ var App = {
 					'object-fit':'cover',
 					opacity:0
 				}
-			}).inject(this.$introContainer);
+			}).inject(this.$body);
 			
 			this.$intro.addEventListener('canplay',function(){
 				this.$intro.fade('in');
@@ -143,7 +131,6 @@ var App = {
 		},
 		clearIntro:function(){
 			this.$intro.destroy();
-			this.$introContainer.destroy();
 		},
 		initializeAssets:function(){
 			this.$splash = this.$body.getElement('.splash.poster');
