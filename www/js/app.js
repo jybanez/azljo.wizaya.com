@@ -106,10 +106,11 @@ var App = {
 					position:'fixed',
 					top:0,
 					left:0,
-					right:0,
-					bottom:0,
-					width:'100%',
-					height:'100%',
+					'transform':'translateX(-50%) translateY(-50%)',
+					'min-width':'100%',
+					'min-height':'100%',
+					width:'auto',
+					height:'auto',
 					'z-index':100,
 					background:'#000',
 					opacity:0
@@ -120,6 +121,10 @@ var App = {
 				this.$intro.fade('in');
 			}.bind(this),false);
 			this.$intro.addEventListener('ended',function(){
+				this.$intro.destroy();
+				$pick(onComplete,$empty)();
+			}.bind(this),false);
+			this.$intro.addEventListener('error',function(){
 				this.$intro.destroy();
 				$pick(onComplete,$empty)();
 			}.bind(this),false);
