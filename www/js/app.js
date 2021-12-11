@@ -143,6 +143,7 @@ var App = {
 		},
 		clearIntro:function(){
 			this.$intro.destroy();
+			this.$introContainer.destroy();
 		},
 		initializeAssets:function(){
 			this.$splash = this.$body.getElement('.splash.poster');
