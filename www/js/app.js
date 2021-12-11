@@ -97,35 +97,40 @@ var App = {
 			});
 		},
 		intro:function(onComplete){
+			this.$introContainer = new Element('div',{
+				styles:{
+					position:'relative',
+					top:0,
+					left:0,
+					right:0,
+					bottom:0,
+					overflow:'hidden',
+					background:'#000',
+					'z-index:100
+				}
+			}).inject(this.$body);
 			this.$intro = new Element('video',{
 				controls:false,
 				autoplay:true,
 				width:'100%',
 				height:'100%',
 				styles:{
-					position:'fixed',
-					top:'50%',
-					left:'50%',
-					'transform':'translateX(-50%) translateY(-50%)',
-					'min-width':'100vh',
-					'min-height':'100vh',
-					width:'auto',
-					height:'auto',
-					'z-index':100,
-					background:'#000',
+					width:'100%',
+					height:'100%',
+					'object-fit':'cover',
 					opacity:0
 				}
-			}).inject(this.$body);
+			}).inject(this.$introContainer);
 			
 			this.$intro.addEventListener('canplay',function(){
 				this.$intro.fade('in');
 			}.bind(this),false);
 			this.$intro.addEventListener('ended',function(){
-				this.$intro.destroy();
+				this.clearIntro();
 				$pick(onComplete,$empty)();
 			}.bind(this),false);
 			this.$intro.addEventListener('error',function(){
-				this.$intro.destroy();
+				this.clearIntro();
 				$pick(onComplete,$empty)();
 			}.bind(this),false);
 			
@@ -135,6 +140,9 @@ var App = {
 			})); 
 			
 			
+		},
+		clearIntro:function(){
+			this.$intro.destroy();
 		},
 		initializeAssets:function(){
 			this.$splash = this.$body.getElement('.splash.poster');
