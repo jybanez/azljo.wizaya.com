@@ -104,8 +104,8 @@ var App = {
 				height:'100%',
 				styles:{
 					position:'fixed',
-					top:0,
-					left:0,
+					top:'50%',
+					left:'50%',
 					'transform':'translateX(-50%) translateY(-50%)',
 					'min-width':'100vh',
 					'min-height':'100vh',
