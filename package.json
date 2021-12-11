@@ -11,13 +11,12 @@
     "url": "git+https://github.com/jybanez/azljo.wizaya.com.git"
   },
   "keywords": [
-    "AZL Jo",
-    "Election"
+    "AZL Jo"
   ],
   "author": "Wizaya Business Technologies",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jybanez/azl.wizaya.com/issues"
+    "url": "https://github.com/jybanez/azljo.wizaya.com/issues"
   },
-  "homepage": "https://github.com/jybanez/azl.wizaya.com#readme"
+  "homepage": "https://github.com/jybanez/azljo.wizaya.com#readme"
 }
